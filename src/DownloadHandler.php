@@ -787,7 +787,7 @@ class DLM_Download_Handler {
 				$file_size = $file['headers']['content-length'];
 			}
 		} else {
-			$file_size = filesize( $file_path );
+			$file_size = @filesize( $file_path );
 		}
 
 		if ( isset( $file_size ) && $file_size ) {
